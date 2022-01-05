@@ -1,4 +1,4 @@
-SLIDE1
+#SLIDE1
 
 
 WITH sub AS 
@@ -20,7 +20,7 @@ WITH sub AS
 SELECT CONCAT(DATE_PART('year',sub.date),'-',DATE_PART('month',sub.date)),sub.customer,sub.sum_paid, sum_paid - LAG(sum_paid) OVER (PARTITION BY customer ORDER BY customer) AS diff
 FROM sub;
 
-SLIDE2
+#SLIDE2
 
 
 WITH rentalcount AS (WITH sub AS (SELECT c.name category, f.title title, f.film_id id
@@ -47,7 +47,7 @@ ORDER BY sum desc;
 
 
 
-SLIDE3
+#SLIDE3
 
 WITH family_movies AS (SELECT c.name category, f.title title, f.film_id id
             FROM category c
@@ -70,7 +70,7 @@ ORDER BY rental_week;
 
 
  
-SLIDE4
+#SLIDE4
 
 
 
